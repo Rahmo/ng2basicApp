@@ -15,14 +15,6 @@ import { AstronautService } from './astronaut.service';
 import { AstronautViewerComponent } from './astronaut-viewer/astronaut-viewer.component';
 import { NasaImageryService } from './nasa-imagery.service';
 
-const routes: Routes = [
-  {
-    path: 'missions', children: [
-      { path: '', component: MissionListComponent },
-      { path: ':id', component: MissionViewerComponent }
-    ]
-  }
-];
 
 @NgModule({
   declarations: [
@@ -36,7 +28,6 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     HttpModule,
-    RouterModule.forChild(routes),
     MaterialModule
   ],
   exports: [

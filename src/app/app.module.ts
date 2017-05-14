@@ -8,11 +8,8 @@ import { CatalogModule } from './catalog/catalog.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { routing }  from './app.routes';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent },
-];
 
 @NgModule({
   declarations: [
@@ -22,8 +19,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    routing,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
     MissionModule,
     CatalogModule
   ],

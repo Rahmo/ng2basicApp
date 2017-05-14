@@ -1,0 +1,104 @@
+npm install -g @angular/cli node-sass
+
+ng new NameOfApp 
+
+ng new HelloWorld —skip-install —skip-git
+Check out the help for ng 
+
+-angular universal is used when it comes to use using shell web which is quickly load the main two pages of your website.
+
+-the angular that goes to client ship only the angular src that you use not the whole angular. this makes it faster.
+
+app start from main.ts and bootstrap thought app component 
+-app.component where it starts from he bootstrap in app
+
+*Try using yarn better than npm
+
+run angular and wait for 2 seconds
+ng serve —poll=2000 -o    
+
+—— to declare a variable 
+you put the name first then the type of it 
+stringOne:number = 5;
+isHappy = false;
+{{isHappy ? ‘:)’ : ‘:-(’}}
+interpolation ^^^
+
+——
+databinding :  
+
+one way binding it faster than two way
+
+<input [value] = “MyValue”>  <<< binding to a property in DOM like value and innerHTML
+<div> </div> 
+
+binding to event: two way
+or your can use $event or by using the default using banana and a box
+(ngModelChange)=“handleChangeMethod($event)”
+<button (click)="clicked($event)"></button> explicit
+[(ngModel)}=“name” banana and a box is two way data binding 
+name is a propoerty
+———
+<div*ngif=“name.length > 2 ;else MyOtherTamplate” > 
+name: {{name}}
+</div>
+<ng-template [ngif]=“name.length> 2”          <— alternative of doing *ngif
+   <div> 
+   name : {{myName}}
+   </div>
+    </ng-template>
+
+—————————
+<li *ngfor = “let car of collection ; let ndx = index; let c = count ; let f = first”; let o = odd>
+ {{ndx}}{{car}}
+</li>
+———
+$event is an object reserved for angular that pass in an event object 
+$event.target.value
+——
+[ngClass]=“{‘even’:e ‘odd’:o}” is better
+[ngStyle]
+or
+[class.even] = “e”
+[style.backgroundcolor] = 
+—————————
+pipe
+{{MyValue | upperCase | lowercase | date : ‘yMMMMd’ }}   <<<   formatting stuff
+collection  | json
+Json pipe is will serialize everything on the collection as json
+——————————
+performance : treat collection as immutable
+
+—————— 
+observables vs promises 
+but observables are better
+
+create a mission component:
+ng generate module mission -d
+
+ng generate component mission/mission-list -m mission/mission.module --spec false -d 
+creating a component inside here ^^^   then importing it in the module and update the middle with the references 
+
+-d will be dry changes not applied and saved
+
+——
+  exports:[MissionListComponent] will make the component public to other inherited component 
+
+——
+to create a service use  
+ng g s mission/mission -m mission/mission.module --spec false 
+————
+command+p search all nice tool
+import {IMission} from "../../models/IMission"
+ download vscode-icons///
+in angular u can use 
+mission?.id  
+to let it show when it exist 
+
+ADVANCED TOPICS To read next 
+::gates in routing 
+Aot . 
+Tree shaking  
+Observables
+--Todd modue 
+--Ultimateangular.com

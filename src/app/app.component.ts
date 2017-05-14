@@ -19,6 +19,7 @@ export class AppComponent {
   public nav: INav[] = [
     { link: '/', name: 'Home', exact: true },
     { link: '/missions', name: 'Missions', exact: true },
+    { link: '/catalog', name: 'Catalog', exact: true },
     { link: '/404', name: '404', exact: false },
   ];
 }

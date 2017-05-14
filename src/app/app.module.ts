@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MissionModule } from './mission/mission.module';
-
+import { CatalogModule } from './catalog/catalog.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -18,13 +18,14 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    MissionModule
+    MissionModule,
+    CatalogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
